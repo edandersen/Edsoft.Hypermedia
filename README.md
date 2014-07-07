@@ -11,7 +11,7 @@ This is the core library, containing Serializers and Hypermedia Representors.
 
 ### Edsoft.Hypermedia.Client
 
-A fully async/awaited supported client for traversing and navigating Hypermedia APIs. Supports .NET 4+, Xamarin, Windows Phone, Windows RT. Docs coming soon.
+A fully async/await supported client for traversing and navigating Hypermedia APIs. Supports .NET 4+, Xamarin, Windows Phone, Windows RT. Docs coming soon.
 
 #### Hypermedia format support
 
