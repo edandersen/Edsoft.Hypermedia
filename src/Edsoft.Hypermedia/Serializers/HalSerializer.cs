@@ -178,14 +178,14 @@ namespace Edsoft.Hypermedia.Serializers
                 // multiple items in same embedded resource an array
                 representorsInCollection.AddRange(propertyAsArray.OfType<JObject>()
                     .Select(item => BuildRepresentorBuilderFromJObject(builderFactoryMethod, item))
-                    .Select(builderResult => builderResult.ToRepresention()));
+                    .Select(builderResult => builderResult.ToRepresentation()));
             }
             else
             {
                 // single item as embedded resource
                 var builderResult = BuildRepresentorBuilderFromJObject(builderFactoryMethod,
                     (JObject)propertyJToken);
-                representorsInCollection.Add(builderResult.ToRepresention());
+                representorsInCollection.Add(builderResult.ToRepresentation());
             }
             return representorsInCollection;
         }

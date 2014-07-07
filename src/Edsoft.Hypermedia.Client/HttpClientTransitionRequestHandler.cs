@@ -83,7 +83,7 @@ namespace Edsoft.Hypermedia.Client
 
             var builder = Serializer.DeserializeToNewBuilder(resultContentString, () => new RepresentationBuilder());
 
-            return builder.ToRepresention();
+            return builder.ToRepresentation();
         }
     }
 }
