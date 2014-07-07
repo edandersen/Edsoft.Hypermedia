@@ -1,4 +1,5 @@
-Copyright (c) 2014 Medidata Solutions Worldwide
+Copyright (c) 2014 Ed Andersen, Licensed under MIT (this license)
+Portions (c) 2014 Medidata Solutions, Licensed under MIT (this license)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,18 +1,17 @@
-﻿# Crichton.NET [![Build Status](http://crichton-dn-ci.cloudapp.net/app/rest/builds/buildType:\(id:CrichtonDotnet_Develop\)/statusIcon)](http://crichton-dn-ci.cloudapp.net/?guest=1)
-Crichton is a library to simplify generating and consuming Hypermedia API responses. It has the knowledge of Hypermedia
-from the Ancients.
-
-This is a .NET/C# port of the Ruby library at http://www.github.com/mdsol/crichton.
-
-NOTE: THIS IS UNDER HEAVY DEV AND IS NOT READY TO BE USED YET
+﻿# .NET Hypermedia Toolkit
+A series of tools to enable .NET applications to produce and consume RESTful Hypermedia enabled APIs.
 
 ## Components
 
-### Crichton.Representors
+### Edsoft.Hypermedia
 
 This is the core library, containing Serializers and Hypermedia Representors.
 
-* [RepresentorBuilder][].
+* [RepresentationBuilder][].
+
+### Edsoft.Hypermedia.Client
+
+A fully async/awaited supported client for traversing and navigating Hypermedia APIs. Supports .NET 4+, Xamarin, Windows Phone, Windows RT. Docs coming soon.
 
 #### Hypermedia format support
 
@@ -81,7 +80,7 @@ Spec | Support
 7.1.1.1. String values | ❌
 7.1.1.2. Link Object values | ❌
 
-The HALE+JSON Serializer is not complete. Likely 5.2 Constraint Properties will be implemented next.
+The HALE+JSON Serializer supports everything apart from Meta and Reference Objects.
 
 ##### Other formats
 
@@ -91,7 +90,9 @@ We hope to support other formats such as Collection+JSON, Siren etc in the futur
 See [CONTRIBUTING][] for details.
 
 ## Copyright
-Copyright (c) 2014 Medidata Solutions Worldwide. Licensed under MIT. See [LICENSE][] for details.
+Copyright (c) 2014 Ed Andersen. Licensed under MIT. See [LICENSE][] for details.
+
+All commits up to July 3rd 2014 and [this commit hash](https://github.com/edandersen/Edsoft.Hypermedia/commit/83d1be2299c1dce638d3c64881d9a44f2217b416)  Copyright (c) 2014 Medidata Solutions, Licensed under MIT. This project was forked from https://github.com/mdsol/crichton-dotnet on July 6th 2014.
 
 ## Authors
 
@@ -101,5 +102,5 @@ Copyright (c) 2014 Medidata Solutions Worldwide. Licensed under MIT. See [LICENS
 
 [CONTRIBUTING]: CONTRIBUTING.md
 [LICENSE]: LICENSE.md
-[RepresentorBuilder]: docs/representor_builder.md
+[RepresentationBuilder]: docs/representor_builder.md
 [BenchmarkTool]: docs/representor_benchmark_tool.md
