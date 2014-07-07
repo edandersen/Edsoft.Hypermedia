@@ -59,12 +59,12 @@ Param | Description
 --- | ---
 data | An object, Model, ViewModel etc 
 
-### ```void AddTransition(CrichtonTransition transition)```
-Adds a CrichtonTransition to the current HypermediaRepresentation that you are building.
+### ```void AddTransition(HypermediaTransition transition)```
+Adds a HypermediaTransition to the current HypermediaRepresentation that you are building.
 
 Param | Description
 --- | ---
-transition | A CrichtonTransition object 
+transition | A HypermediaTransition object 
 
 
 ### ```void AddTransition(string rel, string uri = null, string title = null, string type = null, bool uriIsTemplated = false, string depreciationUri = null, string name = null, string profileUri = null, string languageTag = null)```
