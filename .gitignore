@@ -21,3 +21,4 @@ docs/*.html
 tools/*/bin/*
 tools/*/obj/*
 TestResults/*
+*.v12.suo

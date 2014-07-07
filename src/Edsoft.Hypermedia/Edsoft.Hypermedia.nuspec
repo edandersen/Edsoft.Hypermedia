@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Edsoft.Hypermedia</id>
+    <title>.NET Hypermedia Toolkit Core Libraries</title>
+    <version>0.3.0-alpha</version> <!-- why not just use $version$? Because NuGet 2.8.1 has a bug with PCLs: https://nuget.codeplex.com/workitem/4013 -->
+    <authors>Ed Andersen, Kenya Matsumoto</authors>
+    <copyright>Ed Andersen</copyright>
+    <licenseUrl>https://github.com/edandersen/Edsoft.Hypermedia/blob/develop/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/edandersen/Edsoft.Hypermedia</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core components for the .NET Hypermedia Toolkit.</description>
+    <language>en-US</language>
+    <tags>hypermedia hateoas webapi soa</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="6.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="\bin\Release\Edsoft.Hypermedia.dll" target="lib\portable-net40+sl50+wp80+win" />
+    <file src="\bin\Release\Edsoft.Hypermedia.xml" target="lib\portable-net40+sl50+wp80+win" />
+    <file src="\bin\Release\Edsoft.Hypermedia.dll" target="lib\net40" />
+    <file src="\bin\Release\Edsoft.Hypermedia.xml" target="lib\net40" />
+  </files>
+</package>
