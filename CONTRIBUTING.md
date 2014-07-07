@@ -1,13 +1,8 @@
 # Contributing
-The following highlight some guidelines for contributing to Crichton.NET and submitting pull requests.
-
-## Background
-At the heart of Crichton is the [ALPS specification](http://alps.io/spec/index.html). It is important that
-functionality that impacts Crichton's resource descriptors conforms to and preserves the existing ALPS-related
-implementations so that profiles can be properly generated and referenced.
+The following highlight some guidelines for contributing to .NET Hypermedia Toolkit and submitting pull requests.
 
 ## Guidelines
-Crichton.NET aspires follow ideas set out by Bob Martin in [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
+.NET Hypermedia Toolkit aspires follow ideas set out by Bob Martin in [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
 As such, the following are some guidelines to think about as you code:
 
 ### Code should follow S.O.L.I.D principles
@@ -33,7 +28,4 @@ As such, the following are some guidelines to think about as you code:
 * Repeatable - work in any environment.
 * Self-validating - examples are written to document what passes.
 * Timely - Follow TDD/BDD principles.
-
-## Pull Requests
-(.NET specific Pull Request guide coming soon)
 
