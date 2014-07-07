@@ -16,7 +16,7 @@ namespace Edsoft.Hypermedia.Tests.Integration
 
             var builder = serializer.DeserializeToNewBuilder(fileContent, () => new RepresentationBuilder());
 
-            var result = serializer.Serialize(builder.ToRepresention());
+            var result = serializer.Serialize(builder.ToRepresentation());
 
             AssertDeepEqualsUnordered(JObject.Parse(fileContent), JObject.Parse(result),
                 "JSON comparison failed. Expected: " + Environment.NewLine + fileContent + Environment.NewLine + "Result: " + Environment.NewLine + result);

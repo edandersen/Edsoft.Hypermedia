@@ -10,7 +10,7 @@ namespace Edsoft.Hypermedia
         /// Create a HypermediaRepresentation object from this builder instance.
         /// </summary>
         /// <returns>A HypermediaRepresentation object.</returns>
-        HypermediaRepresentation ToRepresention();
+        HypermediaRepresentation ToRepresentation();
 
         /// <summary>
         /// Sets the Self Link on the HypermediaRepresentation object that you are building

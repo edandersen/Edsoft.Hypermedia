@@ -38,7 +38,7 @@ namespace Edsoft.Hypermedia.Benchmark.ConsoleCommands
                 {
                     var serializer = new HalSerializer();
                     var builder = serializer.DeserializeToNewBuilder(fileContent, () => new RepresentationBuilder());
-                    builder.ToRepresention();
+                    builder.ToRepresentation();
                 }
             }
             stopwatch.Stop();

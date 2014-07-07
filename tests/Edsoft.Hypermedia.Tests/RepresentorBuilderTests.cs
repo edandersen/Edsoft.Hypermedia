@@ -22,7 +22,7 @@ namespace Edsoft.Hypermedia.Tests
         [Test]
         public void ToRepresentor_ReturnsARepresentor()
         {
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             Assert.IsInstanceOf<HypermediaRepresentation>(result);
         }
@@ -33,7 +33,7 @@ namespace Edsoft.Hypermedia.Tests
             var self = Fixture.Create<string>();
 
             sut.SetSelfLink(self);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             Assert.AreEqual(self, result.SelfLink);
         }
@@ -50,7 +50,7 @@ namespace Edsoft.Hypermedia.Tests
         {
             var attributes = new JObject();
             sut.SetAttributes(attributes);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             Assert.AreEqual(attributes, result.Attributes);
         }
@@ -69,7 +69,7 @@ namespace Edsoft.Hypermedia.Tests
             var expectedJObject = JObject.FromObject(example);
 
             sut.SetAttributesFromObject(example);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             foreach (var property in expectedJObject.Properties())
             {
@@ -91,7 +91,7 @@ namespace Edsoft.Hypermedia.Tests
             var transition = Fixture.Create<HypermediaTransition>();
             
             sut.AddTransition(transition);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             Assert.IsNotNull(result.Transitions.SingleOrDefault(t => t == transition));
 
@@ -111,7 +111,7 @@ namespace Edsoft.Hypermedia.Tests
             var uri = Fixture.Create<string>();
 
             sut.AddTransition(rel, uri);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.Transitions.Should().ContainSingle(t => t.Rel == rel && t.Uri == uri);
 
@@ -134,7 +134,7 @@ namespace Edsoft.Hypermedia.Tests
             var title = Fixture.Create<string>();
 
             sut.AddTransition(rel, uri, title);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.Transitions.Should().ContainSingle(t => t.Rel == rel && t.Uri == uri && t.Title == title);
 
@@ -149,7 +149,7 @@ namespace Edsoft.Hypermedia.Tests
             var type = Fixture.Create<string>();
 
             sut.AddTransition(rel, uri, title, type);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.Transitions.Should().ContainSingle(t => t.Rel == rel && t.Uri == uri && t.Title == title && t.Type == type);
 
@@ -162,7 +162,7 @@ namespace Edsoft.Hypermedia.Tests
             var isTemplated = Fixture.Create<bool>();
 
             sut.AddTransition(rel, uriIsTemplated: isTemplated);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.Transitions.Should().ContainSingle(t => t.Rel == rel && t.UriIsTemplated == isTemplated);
         }
@@ -174,7 +174,7 @@ namespace Edsoft.Hypermedia.Tests
             var depreciationUri = Fixture.Create<string>();
 
             sut.AddTransition(rel, depreciationUri: depreciationUri);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.Transitions.Should().ContainSingle(t => t.Rel == rel && t.DepreciationUri == depreciationUri);
         }
@@ -186,7 +186,7 @@ namespace Edsoft.Hypermedia.Tests
             var name = Fixture.Create<string>();
 
             sut.AddTransition(rel, name: name);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.Transitions.Should().ContainSingle(t => t.Rel == rel && t.Name == name);
         }
@@ -198,7 +198,7 @@ namespace Edsoft.Hypermedia.Tests
             var profileUri = Fixture.Create<string>();
 
             sut.AddTransition(rel, profileUri: profileUri);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.Transitions.Should().ContainSingle(t => t.Rel == rel && t.ProfileUri == profileUri);
         }
@@ -210,7 +210,7 @@ namespace Edsoft.Hypermedia.Tests
             var languageTag = Fixture.Create<string>();
 
             sut.AddTransition(rel, languageTag: languageTag);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.Transitions.Should().ContainSingle(t => t.Rel == rel && t.LanguageTag == languageTag);
         }
@@ -222,7 +222,7 @@ namespace Edsoft.Hypermedia.Tests
             var resource = Fixture.Create<HypermediaRepresentation>();
 
             sut.AddEmbeddedResource(key, resource);
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             result.EmbeddedResources[key].Should().ContainSingle(t => t == resource);
         }
@@ -253,7 +253,7 @@ namespace Edsoft.Hypermedia.Tests
 
             sut.SetCollection(examples, selfLinkFunc);
 
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             foreach (var example in examples)
             {
@@ -287,7 +287,7 @@ namespace Edsoft.Hypermedia.Tests
 
             sut.SetCollection(representors);
 
-            var result = sut.ToRepresention();
+            var result = sut.ToRepresentation();
 
             CollectionAssert.AreEquivalent(representors, result.Collection);
         }

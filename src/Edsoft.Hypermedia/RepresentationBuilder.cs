@@ -13,7 +13,7 @@ namespace Edsoft.Hypermedia
             representor = new HypermediaRepresentation();
         }
 
-        public HypermediaRepresentation ToRepresention()
+        public HypermediaRepresentation ToRepresentation()
         {
             return representor;
         }

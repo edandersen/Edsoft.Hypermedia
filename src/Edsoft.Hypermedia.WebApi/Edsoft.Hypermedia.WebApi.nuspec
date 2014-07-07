@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Edsoft.Hypermedia.WebApi</id>
+    <title>Hypermedia support for ASP.NET WebApi</title>
+    <version>$version$</version>
+    <authors>Ed Andersen</authors>
+    <copyright>Ed Andersen</copyright>
+    <licenseUrl>https://github.com/edandersen/Edsoft.Hypermedia/blob/develop/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/edandersen/Edsoft.Hypermedia/crichton-dotnet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides support for ASP.NET WebApi Hypermedia.</description>
+    <language>en-US</language>
+    <tags>hypermedia hateoas webapi soa</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.1.2" />
+      <dependency id="Microsoft.AspNet.WebApi.Core" version="5.1.2" />
+      <dependency id="Microsoft.AspNet.WebApi.WebHost" version="5.1.2" />
+      <dependency id="Newtonsoft.Json" version="6.0.3" />
+      <dependency id="Edsoft.Hypermedia" version="0.4.0-alpha" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="\bin\Release\Edsoft.Hypermedia.WebApi.dll" target="lib\net45" />
+  </files>
+</package>

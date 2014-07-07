@@ -15,7 +15,6 @@ _NCrunch_Crichton/
 *.ncrunchsolution
 *.ncrunchproject
 *.ncrunchsolution.user
-samples/*
 tools*/bin/*
 docs/*.html
 tools/*/bin/*
@@ -23,3 +22,7 @@ tools/*/obj/*
 TestResults/*
 *.v12.suo
 *.sln.DotSettings.user
+src/*.nupkg
+samples/*/bin/*
+samples/*/obj/*
+*.csproj.user

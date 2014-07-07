@@ -65,7 +65,7 @@ namespace Edsoft.Hypermedia.Tests
             var representorResult = Fixture.Create<HypermediaRepresentation>();
             var representorAsJson = Fixture.Create<string>();
             var representorBuilder = MockRepository.GenerateMock<IRepresentationBuilder>();
-            representorBuilder.Stub(r => r.ToRepresention()).Return(representorResult);
+            representorBuilder.Stub(r => r.ToRepresentation()).Return(representorResult);
             serializer.Stub(s => s.ContentType).Return(DefaultMediaType);
             serializer.Stub(
                 s =>
@@ -111,7 +111,7 @@ namespace Edsoft.Hypermedia.Tests
             var representorResult = Fixture.Create<HypermediaRepresentation>();
             var representorAsJson = Fixture.Create<string>();
             var representorBuilder = MockRepository.GenerateMock<IRepresentationBuilder>();
-            representorBuilder.Stub(r => r.ToRepresention()).Return(representorResult);
+            representorBuilder.Stub(r => r.ToRepresentation()).Return(representorResult);
             serializer.Stub(s => s.ContentType).Return(DefaultMediaType);
             serializer.Stub(
                 s =>
@@ -143,7 +143,7 @@ namespace Edsoft.Hypermedia.Tests
             var representorResult = Fixture.Create<HypermediaRepresentation>();
             var representorAsJson = Fixture.Create<string>();
             var representorBuilder = MockRepository.GenerateMock<IRepresentationBuilder>();
-            representorBuilder.Stub(r => r.ToRepresention()).Return(representorResult);
+            representorBuilder.Stub(r => r.ToRepresentation()).Return(representorResult);
             serializer.Stub(s => s.ContentType).Return(DefaultMediaType);
             serializer.Stub(s => s.DeserializeToNewBuilder(Arg<string>.Is.Equal(representorAsJson), Arg<Func<IRepresentationBuilder>>.Matches(m => m().GetType() == typeof(RepresentationBuilder)))).Return(representorBuilder);
 
@@ -168,7 +168,7 @@ namespace Edsoft.Hypermedia.Tests
             var representorResult = Fixture.Create<HypermediaRepresentation>();
             var representorAsJson = Fixture.Create<string>();
             var representorBuilder = MockRepository.GenerateMock<IRepresentationBuilder>();
-            representorBuilder.Stub(r => r.ToRepresention()).Return(representorResult);
+            representorBuilder.Stub(r => r.ToRepresentation()).Return(representorResult);
             serializer.Stub(s => s.ContentType).Return(DefaultMediaType);
             serializer.Stub(
                 s =>
@@ -196,7 +196,7 @@ namespace Edsoft.Hypermedia.Tests
             var representorResult = Fixture.Create<HypermediaRepresentation>();
             var representorAsJson = Fixture.Create<string>();
             var representorBuilder = MockRepository.GenerateMock<IRepresentationBuilder>();
-            representorBuilder.Stub(r => r.ToRepresention()).Return(representorResult);
+            representorBuilder.Stub(r => r.ToRepresentation()).Return(representorResult);
             serializer.Stub(s => s.ContentType).Return(DefaultMediaType);
             serializer.Stub(
                 s =>
@@ -225,7 +225,7 @@ namespace Edsoft.Hypermedia.Tests
             var representorResult = Fixture.Create<HypermediaRepresentation>();
             var representorAsJson = Fixture.Create<string>();
             var representorBuilder = MockRepository.GenerateMock<IRepresentationBuilder>();
-            representorBuilder.Stub(r => r.ToRepresention()).Return(representorResult);
+            representorBuilder.Stub(r => r.ToRepresentation()).Return(representorResult);
             serializer.Stub(s => s.ContentType).Return(DefaultMediaType);
             serializer.Stub(
                 s =>
